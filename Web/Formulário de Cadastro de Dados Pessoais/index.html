@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>CADASTRO</title>
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3273/3273589.png" type="image/x-icon">
+	<style>
+        body {
+            font-family: 'system-ui', sans-serif;
+        }
+    </style>
+</head>
+<body> 
+	<div style="display: flex; margin-left: 10px; margin-bottom: 15px;">
+		<img src="https://cdn-icons-png.flaticon.com/512/3447/3447560.png" width="70px" height="70px">
+		<h2 style="margin-left: 10px;">CADASTRO DE DADOS PESSOAIS</h2>
+	</div>
+
+	<form id="form_cadastro" action="www.empresaxyz/bancodedados/cadastro.php" method="post" style="border: 1px solid black;">
+		<table>
+			<tr>
+				<td align="right">Nome Completo:</td>
+				<td align="left" colspan="2"><input size="50" type="text" name="nome_completo" id="nome_completo" ></input></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Data de Nascimento:</td>
+				<td> <input type="date" name="data_nascimento" id="data_nascimento" style="width: 120px;"> </input> </td>
+			</tr>
+			
+			<tr>
+				<td align="right">Faixa de Idade:</td>
+				<td>
+					<select name="faixaIdade" id="faixaIdade" style="width: 120px;">
+								<option value="1">16 a 20 anos</option>
+								<option value="2">21 a 29 anos</option>
+								<option value="3">30 ou mais</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="right">Gênero:</td>
+				<td> <input type="radio" name="genero" value="Masculino" id="masculino">Masculino<input type="radio" name="genero" value="Feminino" id="feminino">Feminino</td>
+			</tr>
+			
+			<tr>
+				<td align="right">Estado Civil:</td>
+				<td>
+					<select name="estadoCivil" style="width: 120px;">
+						<option value="solteiro">Solteiro</option>
+						<option value="casado">Casado</option>
+						<option value="divorciado">Divorciado</option>
+						<option value="viuvo">Viúvo</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="right">Escolaridade:</td>
+				<td> <input type="radio" name="escolaridade" value="Ensino Fundamental" id="fundamental">Ensino Fundamental<input type="radio" name="escolaridade" value="Ensino Médio" id="medio">Ensino Médio<input type="radio" name="escolaridade" value="Ensino Superior" id="superior">Ensino Superior </td>
+			</tr>
+			
+			<tr>
+				<td align="right">Cargo de Interesse:</td>
+				<td> <input type="checkbox" name="cargo_interessado" value="Programador Front-end" id="front-end">  Front-end <input type="checkbox" name="cargo_interessado" value="Programador Back-end" id="back-end">Back-end <input type="checkbox" name="cargo_interessado" value="Programador Fullstack" id="fullstack">Fullstack</td>
+			</tr>
+			
+			<tr>
+				<td align="right">Língua Estrangeira:</td>
+				<td> <input type="checkbox" name="lingua_estrangeira" value="Inglês" id="ingles">Inglês <input type="checkbox" name="lingua_estrangeira" value="Espanhol" id="espanhol">Espanhol <input type="checkbox" name="lingua_estrangeira" value="Francês" id="frances">Francês </td>	
+			<tr>
+			
+			<tr>
+				<td align="right">Nacionalidade:</td>
+				<td>
+					<select name="nacionalidade" id="nacionalidade">
+								<option value="1">Brasileiro (a)</option>
+								<option value="2">Estrangeiro (a)</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="right" >Endereço:</td>
+				<td><textarea name="endereco" rows="4" cols="45"></textarea></td>
+			</tr>
+			
+		
+			<tr>
+				<td align="right">Bairro:</td>
+				<td><textarea name="endereco" rows="2" cols="45"></textarea></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Cidade:</td>
+				<td><textarea name="cidade" rows="2" cols="25"></textarea></td>
+				<td align="right">UF:</td>
+				<td><textarea name="uf" rows="2" cols="25"></textarea></td>	
+			</tr>
+			
+			
+			<tr>
+				<td align="right">Email:</td>
+				<td><input align="left" type="email" name="email" style="width: 370px;"></td>
+			</tr>
+			
+			<tr>
+				<td align="right">DDD:</td>
+				<td><input type="tel" name="ddd" style="width: 50px;"></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Celular:</td>
+				<td><input type="tel" name="cel" style="width: 210px;" rolspan="2"></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Altura:</td>
+				<td><input type="number" name="altura" step="0.01" style="width: 370px;"></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Peso:</td>
+				<td><input type="number" name="peso" step="0.01" style="width: 370px;"></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Foto:</td>
+				<td><input type="file" name="foto"></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Website ou Rede Social:</td>
+				<td><input type="url" name="media" style="width: 370px;"></td>
+			</tr>
+			
+			<tr>
+				<td align="right">Fale um pouco sobre você:</td>
+				<td align="left"><textarea id="sobre_mim" name="sobre_mim" rows="5" placeholder="Quais são os seus gostos, hobbies, interesses..." cols="45"></textarea></p> </td>
+			</tr>
+		</table>
+		
+		<p style="margin-left: 195px; margin-top: 1px">
+			<input style="width: 60px; height: 30px;" type="submit" value="Enviar">
+			<input style="width: 60px; height: 30px;" type="reset" value="Limpar">
+		</p>
+	</form>
+</body>
+</html>

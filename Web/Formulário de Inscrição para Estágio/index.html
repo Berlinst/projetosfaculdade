@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Cadastro Estágio TI - Tech&CIA</title>
+	<!-- OBS: Empresa Fictícia e Imaginária criada apenas para fins representativos-->
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4745/4745658.png" type="image/x-icon">
+</head>
+<body>
+	<div class="titulo">
+		<img src="images/tech_e_cia_logo_ficticia.png" alt="Logo Ficticia">
+		<div>
+			<h2>Bem vindo!</h2>
+			<p>Esta é página oficial para o Estágio de TI da Empresa Tech&CIA.</p>
+			<!-- OBS: Empresa Fictícia e Imaginária criada apenas para fins representativos-->
+			<p>Preencha as informações abaixo e depois clique em <b> ENVIAR </b> para confirmar sua inscrição!</p>
+		</div>
+	</div>
+
+	
+	<div class="container">
+		<h3>CADASTRO</h3>
+		
+		<form id="form1" name="formulario" action="www.techecia/bancodedados/cadastro/estagio.php" method="post">
+		
+			<p>Nome Completo: <input type="text" size="30" id="nome"></input></p>
+			
+			<p>Email: <input type="email" size="30" id="email"></input></p>
+			
+			<p>Data de Nascimento: <input type="text" maxlength="2" size="1" id="dia">/</input> <input type="text" maxlength="2" size="1" id="mes">/</input> <input type="text" maxlength="4" size="3" id="ano"></input></p>
+			
+			<p>Sexo: <input type="radio" value="Masculino" name="sexo"></input> Masculino <input type="radio" value="Feminino" name="sexo"></input> Feminino</p>
+			
+			<p>Estado Civil: <input type="radio" value="Solteiro(a)" name="estadoCivil"></input> Solteiro (a) <input value="Casado(a)" type="radio" name="estadoCivil"></input> Casado (a) <input type="radio" value="Outros" name="estadoCivil"></input> Outros</p> 
+			
+			<p>Áreas de Interesse: <input type="checkbox" name="areas" value="Análise"></input>Análise <input type="checkbox" name="areas" value="Banco de Dados"></input> Banco de Dados <input type="checkbox" name="areas" value="Desenvolvimento"></input> Desenvolvimento <input type="checkbox" name="areas" value="Engenharia de Software"></input> Engenharia de Software <input type="checkbox" name="areas" value="Redes de Computadores"></input>Redes de Computadores</p>
+			
+			<p style="margin-top: 30px;"><button type="submit" onclick="validar(event)">ENVIAR</button> <button type="reset" >LIMPAR</button></p>
+			
+		</form>	
+	</div>		
+	<script src="scripts/script.js"></script>
+</body>
+</html>

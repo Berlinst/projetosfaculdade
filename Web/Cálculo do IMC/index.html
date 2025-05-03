@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+            font-family: system-ui;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Informe seus dados:</h1>
+        <p>Altura: <input type="text" id="altura" size="20"></p>
+        <p>Peso: <input type="text" id="peso" size="20"></p>
+        <input type="button" value="Calcular" onclick="calc()">
+
+        <p><b>IMC:</b> <span id="imc"></span></p>
+        <p><b>Resposta:</b> <span id="resposta"></span></p>
+    </div>
+    <script>
+        function calc(){
+            let altura = parseFloat(document.getElementById("altura").value);
+            let peso = parseFloat(document.getElementById("peso").value);
+
+            if (isNaN(altura) || isNaN(peso)) {
+                alert("Por favor, insira valores numéricos válidos para altura e peso.");
+                return;
+            }
+
+            let imc = peso / (altura * altura);
+
+            let imc_valor = document.getElementById("imc");
+            let resposta = document.getElementById("resposta");
+            imc_valor.innerHTML = imc.toFixed(2);
+
+            if (imc < 20){
+                resposta.innerHTML = "Abaixo do Peso"
+            } else if (imc >= 20 && imc < 25) {
+                resposta.innerHTML = "Peso Normal"
+            } else {
+                resposta.innerHTML = "Acima do peso"
+            }
+        }
+    </script>
+</body>
+</html>
